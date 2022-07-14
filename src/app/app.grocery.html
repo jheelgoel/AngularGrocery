@@ -1,17 +1,24 @@
 <div>
-    <h2> Grocery list manager </h2>
- 
+    <br>
+    <div style="text-align: center" >
+    <h2> Grocery List Manager </h2>
+    </div>
+    <br>
+    <br>
     <div class="row">
         <div class="col-xs-6 col-md-4">
             <div class="input-group">
-                <input type="text" class="form-control" placeholder="enter grocery items" id="txtSearch" />
+                <input type="text" class="form-control" placeholder="Enter Grocery Items" id="txtSearch" [(ngModel)]="task" />
                 <div class="input-group-btn">
-                    <button class="btn btn-primary" type="button">
-        <span class="glyphicon glyphicon-ok"></span>
-        </button>
-                </div>
+                    <button class="btn btn-primary" type="button"  (click)="onClick()">
+                    <fa-icon [icon]="faCheckSquare"></fa-icon>
+                    </button>
+        <span>
+            {{tasks | json}}
+        </span>
+        
             </div>
         </div>
     </div>
- 
+    
 </div>
