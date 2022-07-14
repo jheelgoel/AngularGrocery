@@ -1,24 +1,30 @@
 <div>
     <br>
-    <div style="text-align: center" >
-    <h2> Grocery List Manager </h2>
+    <div style="text-align:center" >
+    <h2 style="color: rgb(0, 42, 255);"> Grocery List Manager </h2>
     </div>
-    <br>
-    <br>
-    <div class="row">
+    <br/>
+    
+    <div class="container">
         <div class="col-xs-6 col-md-4">
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="Enter Grocery Items" id="txtSearch" [(ngModel)]="task" />
+           <div class="input-group" >
+                <input type="text" class="form-control input-sm" placeholder="Enter Grocery Items" id="txtSearch" [(ngModel)]="task" />
+                
                 <div class="input-group-btn">
                     <button class="btn btn-primary" type="button"  (click)="onClick()">
                     <fa-icon [icon]="faCheckSquare"></fa-icon>
                     </button>
-        <span>
-            {{tasks | json}}
-        </span>
         
             </div>
         </div>
     </div>
+    <br />
+    <ul class="list-group list-group-numbered col-xs-6 col-md-4" >
+        <li *ngFor="let task of tasks" class="list-group-item list-group-item-primary" >
+            
+            <span> {{ task.Name }}</span>
+        
+        </li>
+    </ul>
     
 </div>

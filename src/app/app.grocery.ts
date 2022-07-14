@@ -4,11 +4,8 @@ import { faCheckSquare } from '@fortawesome/free-solid-svg-icons';
     selector: 'app-grocery',
     templateUrl: './app.grocery.html',
     styleUrls: [
-        '../assets/css/bootstrap.min.css'
-      
-        
-       
-    ]
+        '../assets/css/bootstrap.min.css' 
+         ]
     
 })
 export class GroceryComponent {
